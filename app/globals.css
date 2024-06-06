@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.resize-x {
+  resize: horizontal;
+  overflow: auto;
+}
+
+.resize-x::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 6px; /* Largura da alça */
+  height: 100%;
+  background-size: 6px 100%; /* Ajuste para a largura da alça */
+  background-repeat: repeat-y;
+  cursor: ew-resize;
+  z-index: 10; /* Certifique-se de que a alça esteja sobre o conteúdo */
+}
+
+#style {
+  height: auto;
+  width: 1294px;
+}
